@@ -22,3 +22,5 @@ Copy this folder into configs:
 cd ~/.config
 git clone git@github.com:cyrusae/my-nvim.git nvim  # manually make the folder 'nvim'
 ```
+
+Remember to `git add .` after installing new plugins/etc. that might create new (untracked) files.
