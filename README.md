@@ -24,7 +24,3 @@ git clone git@github.com:cyrusae/my-nvim.git nvim  # manually make the folder 'n
 ```
 
 Remember to `git add .` after installing new plugins/etc. that might create new (untracked) files.
-
----
-
-**TODO:** should I .gitignore the lock.json file? Determine this.
