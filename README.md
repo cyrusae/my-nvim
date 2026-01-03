@@ -1,6 +1,6 @@
 To set up Ubuntu to use a more recent version of nvim than installed by default:
 
-```
+``` bash
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
 sudo apt install neovim
@@ -18,7 +18,7 @@ Remember on Ubuntu also to alias `nvim` (or just `vim`) to `neovim` because the 
 On Arch it's just `sudo pacman -S nvim`. 
 
 Copy this folder into configs:
-```
+``` bash
 cd ~/.config
 git clone git@github.com:cyrusae/my-nvim.git nvim  # manually make the folder 'nvim'
 ```
