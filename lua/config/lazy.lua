@@ -37,6 +37,14 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
+-- force using treesitter with markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.treesitter.start()
+  end,
+})
+
 -- Set colorscheme after plugins load
 vim.cmd.colorscheme("catppuccin")
 require("catppuccin").setup({
