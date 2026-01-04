@@ -21,6 +21,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Use system clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
