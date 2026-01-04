@@ -11,8 +11,4 @@ return {
     highlight = { enable = true },
     indent = { enable = true },
   },
-  -- Force use of built-in compiler
-  config = function(_, opts)
-    require("nvim-treesitter.configs").setup(opts)
-  end,
 }
