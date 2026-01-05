@@ -54,6 +54,8 @@ vim.opt.breakindent = true    -- Preserve indentation in wrapped lines
 vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
 vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
 
+vim.opt.signcolumn = "yes"  -- Always show sign column (nicer indent)
+
 -- Set colorscheme after plugins load
 vim.cmd.colorscheme("catppuccin")
 require("catppuccin").setup({
