@@ -24,6 +24,17 @@ vim.g.maplocalleader = "\\"
 -- Use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Soft wrap settings
+vim.opt.wrap = true           -- Enable line wrapping
+vim.opt.linebreak = true      -- Break at word boundaries
+vim.opt.breakindent = true    -- Preserve indentation in wrapped lines
+
+-- Optional: make j/k move by display lines instead of real lines
+vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
+vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
+
+vim.opt.signcolumn = "yes"  -- Always show sign column (nicer indent)
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -44,17 +55,6 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.treesitter.start()
   end,
 })
-
--- Soft wrap settings
-vim.opt.wrap = true           -- Enable line wrapping
-vim.opt.linebreak = true      -- Break at word boundaries
-vim.opt.breakindent = true    -- Preserve indentation in wrapped lines
-
--- Optional: make j/k move by display lines instead of real lines
-vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
-vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
-
-vim.opt.signcolumn = "yes"  -- Always show sign column (nicer indent)
 
 -- Set colorscheme after plugins load
 vim.cmd.colorscheme("catppuccin")
