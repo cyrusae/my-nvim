@@ -1,7 +1,7 @@
 To set up Ubuntu to use a more recent version of nvim than installed by default:
 
 ``` bash
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt install neovim
 
@@ -11,6 +11,14 @@ sudo apt install neovim
 
 sudo apt update
 sudo apt upgrade
+```
+
+If that's not giving you the most recent version:
+
+```bash
+curl -LO https://github.com/neovim/neovim/releases/download/v0.11.5/nvim.appimage
+chmod +x nvim.appimage
+sudo mv nvim.appimage /usr/local/bin/nvim
 ```
 
 Remember on Ubuntu also to alias `nvim` (or just `vim`) to `neovim` because the short commnand isn't going to be automatic.
