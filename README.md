@@ -16,10 +16,14 @@ sudo apt upgrade
 If that's not giving you the most recent version:
 
 ```bash
-curl -LO https://github.com/neovim/neovim/releases/download/v0.11.5/nvim.appimage
-chmod +x nvim.appimage
-sudo mv nvim.appimage /usr/local/bin/nvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 ```
+
+(This should work without changes to PATH)
+
+If `which nvim` shows the correct location after this but `nvim --version` doesn't give anything: `hash -r` to refresh command history, then try again.
 
 Remember on Ubuntu also to alias `nvim` (or just `vim`) to `neovim` because the short commnand isn't going to be automatic.
 
